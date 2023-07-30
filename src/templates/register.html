@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Shop &mdash; Free Website Template, Free HTML5 Template by gettemplates.co</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Free HTML5 Website Template by gettemplates.co" />
+        <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+        <meta name="author" content="gettemplates.co" />
+
+        <!-- Animate.css -->
+        <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+        <!-- Icomoon Icon Fonts-->
+        <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+        <!-- Bootstrap  -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+        <!-- Flexslider  -->
+        <link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
+
+        <!-- Owl Carousel  -->
+        <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+        <!-- Theme style  -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+        <!-- Modernizr JS -->
+        <script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
+        <!-- FOR IE9 below -->
+        <!--[if lt IE 9]>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+    
+    </head>
+    
+    <body>
+        <div class="fh5co-loader"></div>
+	
+            <div id="page">
+            <nav class="fh5co-nav" role="navigation">
+                <div class="container">
+                    <div id="fh5co-logo"><a href="/">Charithra's Gallery</a></div>
+                </div>
+            </nav>
+            </div>
+
+
+        <center>
+            <div class="container-login">
+                <form action="register" method="post">
+                    {% csrf_token %}
+                    <p>Enter User details to login...</p>
+                    <p><input type="text" name="first_name" placeholder="First Name" required="True"><br></p>
+                    <p><input type="text" name="last_name" placeholder="Last Name" required="True"><br></p>
+                    <p><input type="text" name="username" placeholder="Username" required="True"><br></p>
+                    <p><input type="text" name="email" placeholder="EMAIL" required="True"><br></p>
+                    <p><input type="text" name="password1" placeholder="Password" required="True"><br></p>
+                    <p><input type="text" name="password2" placeholder="Confirm Password" required="True"><br></p>
+                    <p><input type="submit"></p>
+
+                </form>
+                <div>
+                    {% for message in messages %}
+                    <h3> {{message}} </h3>
+                    {% endfor %}
+                </div>
+            </div>
+        </center>
+
+        <!-- jQuery -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <!-- jQuery Easing -->
+        <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+        <!-- Bootstrap -->
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <!-- Waypoints -->
+        <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+        <!-- Carousel -->
+        <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+        <!-- countTo -->
+        <script src="{% static 'js/jquery.countTo.js' %}"></script>
+        <!-- Flexslider -->
+        <script src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+        <!-- Main -->
+        <script src="{% static 'js/main.js' %}"></script>
+        <style>
+            .container-login {
+                text-align: center;
+                border: 4px solid #ccc;
+                padding: 10px;
+                width: 20em;
+                padding-top: 100px;
+                padding-bottom: 100px;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+            }
+        </style>
+    </body>
+</html>
